@@ -250,6 +250,74 @@
             color: #6c757d;
             font-style: italic;
         }
+
+ /* Publication Styles */
+        .pub-stats {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .pub-filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .publication-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .pub-year {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 60px;
+        }
+        
+        .pub-title {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .pub-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .pub-link {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.3rem 0.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
     </style>
 </head>
 <body>
@@ -376,12 +444,288 @@
         <div id="publications" class="page-content">
             <section class="content-section">
                 <h1>Publications</h1>
-                <div class="coming-soon">
-                    <h2>Publication list will be added here</h2>
-                    <p>This section will contain your peer-reviewed publications, conference proceedings, and other academic works.</p>
+                
+               <!-- Publication Statistics -->
+                <div class="pub-stats">
+                    <div class="stat-item">
+                        <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=5ldTcToAAAAJ&hl=de" target="_blank">View Profile</a>
+                    </div>
+                    <div class="stat-item">
+                        <strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-2728-0981" target="_blank">0000-0003-2728-0981</a>
+                    </div>
                 </div>
-            </section>
-        </div>
+
+                <!-- Filter Options -->
+                <div class="pub-filters">
+                    <button class="filter-btn active" onclick="filterPublications('all')">All</button>
+                    <button class="filter-btn" onclick="filterPublications('journal')">Journal Articles</button>
+                    <button class="filter-btn" onclick="filterPublications('conference')">Conference Papers</button>
+                    <button class="filter-btn" onclick="filterPublications('preprint')">Preprints</button>
+                </div>
+                
+            <!-- Publications List -->
+                <div class="publications-list">
+                    
+                    <div class="publication-item journal">
+                        <div class="pub-year">2025</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Withstand Context: Standing Posture Improves Contextual Cueing in Challenging Visual Search</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Busch, N., Dodwell, G., & Geyer, T.</div>
+                            <div class="pub-journal"><em>In press</em></div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2025</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Eye on context: Individual differences reveal the mechanisms of statistical learning</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Conci, M., Mueller, H. J., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Quarterly Journal of Experimental Psychology</em></div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2025</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Top-down and emotional attention in blind and sighted individuals</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Geyer, T., Gädeke, J. C., & Föcker, J.</div>
+                            <div class="pub-journal"><em>Quarterly Journal of Experimental Psychology</em>, 17470218241311202</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Exploring the Effects of Prefrontal Transcranial Direct Current Stimulation on Brain Metabolites: A Concurrent tDCS‐MRS Study</h3>
+                            <div class="pub-authors">Vural, G., Soldini, A., Padberg, F., Karslı, B., <strong>Zinchenko, A.</strong>, Goerigk, S., et al.</div>
+                            <div class="pub-journal"><em>Human Brain Mapping</em>, 45(18), e70097</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Investigating the role of structural connectivity in the individuals with moderate hearing loss</h3>
+                            <div class="pub-authors">Quddus, A. H. M. R., Pervin, M. S., <strong>Zinchenko, A.</strong>, & Al Amin, M. M.</div>
+                            <div class="pub-journal"><em>Brain Disorders</em>, 16, 100165</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item conference">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Withstand Control: Standing posture may differentially affect space-based and feature-based cognitive control through enhanced physiological arousal</h3>
+                            <div class="pub-authors">Busch, N., <strong>Zinchenko, A.</strong>, Halle, M., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Conference presentation</em></div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Invariant contexts reduce response time variability in visual search in an age-specific way: A comparison of children, teenagers, and adults</h3>
+                            <div class="pub-authors">Fan, C., <strong>Zinchenko, A.</strong>, Chen, L., Wu, J., Qian, Y., & Zang, X.</div>
+                            <div class="pub-journal"><em>Attention, Perception, & Psychophysics</em>, 86(6), 1974-1988</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Blocked versus interleaved: How range contexts modulate time perception and its EEG signatures</h3>
+                            <div class="pub-authors">Baykan, C., Zhu, X., <strong>Zinchenko, A.</strong>, & Shi, Z.</div>
+                            <div class="pub-journal"><em>Psychophysiology</em>, 61(8), e14585</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Individual peak alpha frequency does not index individual differences in inhibitory cognitive control</h3>
+                            <div class="pub-authors">Busch, N., Geyer, T., & <strong>Zinchenko, A.</strong></div>
+                            <div class="pub-journal"><em>Psychophysiology</em>, 61(8), e14586</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Emotional modulation of statistical learning in visual search</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Bierlich, A. M., Conci, M., Müller, H. J., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Frontiers in Cognition</em>, 3, 1404112</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">When experience with scenes foils attentional orienting: ERP evidence against flexible target-context mapping in visual search</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Geyer, T., Zang, X., Shi, Z., Müller, H. J., & Conci, M.</div>
+                            <div class="pub-journal"><em>Cortex</em>, 175, 41-53</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Environmental regularities mitigate attentional misguidance in contextual cueing of visual search</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Conci, M., Müller, H. J., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, 50(5), 699</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Distraction from long-term memory in visual search: Acquired procedural and template-based memory interfere with contextual cueing after target re-location</h3>
+                            <div class="pub-authors">Seitz, W., <strong>Zinchenko, A.</strong>, Müller, H. J., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Visual Cognition</em>, 1-22</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Mission impossible? Spatial context relearning following a target relocation event depends on cue predictiveness</h3>
+                            <div class="pub-authors">Geyer, T., <strong>Zinchenko, A.</strong>, Seitz, W., Balik, M., Müller, H. J., & Conci, M.</div>
+                            <div class="pub-journal"><em>Psychonomic Bulletin & Review</em>, 31(1), 148-155</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Contextual cueing of visual search reflects the acquisition of an optimal, one-for-all oculomotor scanning strategy</h3>
+                            <div class="pub-authors">Seitz, W., <strong>Zinchenko, A.</strong>, Müller, H. J., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Communications Psychology</em>, 1(1), 20</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Electrophysiological signatures of temporal context in the bisection task</h3>
+                            <div class="pub-authors">Baykan, C., Zhu, X., <strong>Zinchenko, A.</strong>, Müller, H. J., & Shi, Z.</div>
+                            <div class="pub-journal"><em>Experimental Brain Research</em>, 241(8), 2081-2096</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item conference">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Statistical learning in visual search: 'contextual cueing' reflects the acquisition of an optimal, 'one-for-all' oculomotor scanning strategy</h3>
+                            <div class="pub-authors">Seitz, W., <strong>Zinchenko, A.</strong>, Müller, H., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Conference presentation</em></div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">The acquisition but not adaptation of contextual memories is enhanced in action video-game players</h3>
+                            <div class="pub-authors"><strong>Zinchenko, A.</strong>, Geyer, T., & Föcker, J.</div>
+                            <div class="pub-journal"><em>Computers in Human Behavior</em>, 137, 107401</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Multisensory rather than unisensory representations contribute to statistical context learning in tactile search</h3>
+                            <div class="pub-authors">Chen, S., Geyer, T., <strong>Zinchenko, A.</strong>, Müller, H. J., & Shi, Z.</div>
+                            <div class="pub-journal"><em>Journal of Cognitive Neuroscience</em>, 34(9), 1702-1717</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item journal">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Cross‐modal contextual memory guides selective attention in visual‐search tasks</h3>
+                            <div class="pub-authors">Chen, S., Shi, Z., <strong>Zinchenko, A.</strong>, Müller, H. J., & Geyer, T.</div>
+                            <div class="pub-journal"><em>Psychophysiology</em>, 59(7), e14025</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        
 
         <!-- TEACHING PAGE -->
         <div id="teaching" class="page-content">
@@ -410,6 +754,23 @@
             navLinks.forEach(link => link.classList.remove('active'));
             event.target.classList.add('active');
         }
+
+        function filterPublications(type) {
+            const publications = document.querySelectorAll('.publication-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            publications.forEach(pub => {
+                if (type === 'all' || pub.classList.contains(type)) {
+                    pub.style.display = 'flex';
+                } else {
+                    pub.style.display = 'none';
+                }
+            });
+        }
+        
     </script>
 </body>
 </html>
